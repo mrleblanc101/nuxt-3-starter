@@ -1,6 +1,6 @@
 <template>
     <footer>
-       Footer
+       {{ $t('footer') }}
     </footer>
 </template>
 
@@ -13,3 +13,14 @@ export default {
 <style lang="scss" scoped>
 
 </style>
+
+<!-- <i18n lang="json">
+{
+  "fr": {
+    "footer": "Pied de page"
+  },
+  "en": {
+    "footer": "Footer"
+  }
+}
+</i18n> -->

@@ -1,0 +1,10 @@
+{
+    "fr": {
+        "header": "Entête",
+        "footer": "Pied de page"
+    },
+    "en": {
+        "header": "Header",
+        "footer": "Footer"
+    }
+}
