@@ -1,6 +1,6 @@
 <template>
     <header>
-       {{ $t('header') }}
+        {{ $t('header') }}
         <NuxtLink
             v-for="locale in availableLocales"
             :key="locale.code"
@@ -22,9 +22,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
 
 <!-- <i18n lang="json">
 {

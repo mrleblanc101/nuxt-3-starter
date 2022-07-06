@@ -1,18 +1,14 @@
 <template>
     <footer>
-       {{ $t('footer') }}
+        {{ $t('footer') }}
     </footer>
 </template>
 
 <script>
-export default {
-
-};
+export default {};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
 
 <!-- <i18n lang="json">
 {

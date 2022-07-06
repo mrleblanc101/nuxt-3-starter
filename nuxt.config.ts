@@ -1,4 +1,7 @@
 import { defineNuxtConfig } from 'nuxt'
+import EslintPlugin from 'vite-plugin-eslint';
+import StylelintPlugin from 'vite-plugin-stylelint';
+
 import messages from './src/i18n/index.json';
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
@@ -35,6 +38,14 @@ export default defineNuxtConfig({
     },
 
     vite: {
+        plugins: [
+            EslintPlugin({
+                fix: true,
+            }),
+            StylelintPlugin({
+                fix: true,
+            }),
+        ],
         css: {
             preprocessorOptions: {
                 scss: {
