@@ -14,7 +14,22 @@
         "foundation-sites": "^6.7.4"
     },
     "devDependencies": {
+        "@nuxtjs/eslint-config-typescript": "^10.0.0",
+        "@types/eslint": "^8.4.5",
+        "@types/stylelint": "^13",
+        "@typescript-eslint/eslint-plugin": "^5.30.5",
+        "@typescript-eslint/parser": "^5.30.5",
+        "eslint": "^8.19.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-vue": "^9.2.0",
         "nuxt": "3.0.0-rc.4",
-        "sass": "^1.53.0"
+        "prettier": "^2.7.1",
+        "sass": "^1.53.0",
+        "stylelint": "^13",
+        "stylelint-order": "^5.0.0",
+        "typescript": "^4.7.4",
+        "vite-plugin-eslint": "^1.6.1",
+        "vite-plugin-stylelint": "^2.3.1"
     }
 }
