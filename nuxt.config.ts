@@ -5,6 +5,11 @@ import messages from './src/i18n/index.json';
 export default defineNuxtConfig({
     srcDir: 'src/',
 
+    css: [
+        '@/assets/scss/foundation.scss',
+        '@/assets/scss/app.scss',
+    ],
+
     modules: [
         '@nuxtjs/i18n',
     ],
@@ -28,4 +33,20 @@ export default defineNuxtConfig({
             messages,
         },
     },
+
+    vite: {
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    additionalData: `
+                        @import "@/assets/scss/settings/_functions.scss";
+                        @import "@/assets/scss/settings/_colors.scss";
+                        @import "@/assets/scss/settings/_variables.scss";
+                        @import "@/assets/scss/settings/_settings.scss";
+                        @import "@/assets/scss/settings/_mixins.scss";
+                    `,
+                },
+            },
+        },
+    }
 })

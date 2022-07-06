@@ -5,7 +5,7 @@
             v-for="locale in availableLocales"
             :key="locale.code"
             :to="switchLocalePath(locale.code)"
-            class="button lang primary"
+            class="button primary"
         >
             {{ locale.name }}
         </NuxtLink>
