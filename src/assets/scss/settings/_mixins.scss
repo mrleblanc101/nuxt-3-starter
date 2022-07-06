@@ -1,0 +1,68 @@
+//  -----------------------------
+//  Mixins
+//  -----------------------------
+// stylelint-disable declaration-block-no-duplicate-properties
+
+
+// Clearfix
+@mixin clearfix {
+    &:after {
+        clear: both;
+    }
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+        line-height: 0;
+    }
+}
+
+// Visuallyhidden
+@mixin visuallyhidden($hide: true) {
+    @if $hide == true {
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+    } @else {
+        position: static;
+        overflow: visible;
+        clip: auto;
+        width: auto;
+        height: auto;
+        margin: 0;
+    }
+}
+
+@mixin headings {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+        @content;
+    }
+}
+
+// REM font-size and line-height
+@mixin rem-typo($font) {
+    font-size: rem($font);
+}
+
+// Transitions
+@mixin transition($properties...) {
+    transition-timing-function: $transition-duration;
+    transition-duration: $transition-duration;
+    transition-property: $properties;
+}
