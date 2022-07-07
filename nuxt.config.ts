@@ -1,21 +1,18 @@
-import { defineNuxtConfig } from 'nuxt'
+import { defineNuxtConfig } from 'nuxt';
 import EslintPlugin from 'vite-plugin-eslint';
 import StylelintPlugin from 'vite-plugin-stylelint';
+import ViteSvgLoader from 'vite-svg-loader';
 
 import messages from './src/i18n/index.json';
+import svgoConfig from './svgo.config.js';
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
     srcDir: 'src/',
 
-    css: [
-        '@/assets/scss/foundation.scss',
-        '@/assets/scss/app.scss',
-    ],
+    css: ['@/assets/scss/foundation.scss', '@/assets/scss/app.scss'],
 
-    modules: [
-        '@nuxtjs/i18n',
-    ],
+    modules: ['@nuxtjs/i18n'],
 
     i18n: {
         locales: [
@@ -45,6 +42,9 @@ export default defineNuxtConfig({
             StylelintPlugin({
                 fix: true,
             }),
+            ViteSvgLoader({
+                svgoConfig,
+            }),
         ],
         css: {
             preprocessorOptions: {
@@ -59,5 +59,5 @@ export default defineNuxtConfig({
                 },
             },
         },
-    }
-})
+    },
+});
