@@ -1,13 +1,10 @@
 <template>
-    <h2>Page: Index</h2>
+    <div>
+        <h2>Page: Index</h2>
+        <LibeoLogo height="50" width="200" />
+    </div>
 </template>
 
-<script>
-export default {};
+<script setup>
+import LibeoLogo from '@/assets/svg/libeo-logo.svg';
 </script>
-
-<style lang="scss" scoped>
-h2 {
-    color: red;
-}
-</style>

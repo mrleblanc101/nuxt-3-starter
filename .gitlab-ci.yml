@@ -1,0 +1,16 @@
+variables:
+  # DEV_ENVIRONMENT_URL: https://projet.dev.unimatrix.lbo.qa
+  # PREPROD_ENVIRONMENT_URL: https://projet.preprod.unimatrix.lbo.qa
+  # PROD_ENVIRONMENT_URL: https://projet.lbo.qa
+  DEPLOYMENT_TYPE: K8S # VM si déployé sur une machine virtuelle
+  IMAGES_TO_BUILD: "nuxt"
+include:
+  - project: devops/templates
+    file: base.yml
+
+# Le bloc .deploy_script est seulement requis si un déploiement vers une machine virtuelle est utilisé.
+# .deploy_script:
+#   script:
+#     - cd /opt/projet/
+#     - sudo docker compose --project-directory /opt/projet -f /opt/projet/docker-compose.yml pull
+#     - sudo docker compose --project-directory /opt/projet -f /opt/projet/docker-compose.yml up -d
