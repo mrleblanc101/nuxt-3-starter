@@ -30,6 +30,7 @@ export default defineNuxtConfig({
         defaultLocale: 'fr',
 
         vueI18n: {
+            legacy: false,
             messages,
         },
     },
