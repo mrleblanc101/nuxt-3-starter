@@ -1,28 +1,23 @@
 <template>
     <header>
+        <LibeoLogo height="50" width="200" />
         {{ $t('header') }}
-        <NuxtLink
-            v-for="locale in availableLocales"
-            :key="locale.code"
-            :to="switchLocalePath(locale.code)"
-            class="button primary"
-        >
-            {{ locale.name }}
+        <NuxtLink v-for="l in availableLocales" :key="l.code" :to="switchLocalePath(l.code)" class="button secondary">
+            {{ l.name }}
         </NuxtLink>
     </header>
 </template>
 
-<script>
-export default {
-    computed: {
-        availableLocales() {
-            return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale);
-        },
-    },
-};
-</script>
+<script setup>
+import LibeoLogo from '@/assets/svg/libeo-logo.svg';
 
-<style lang="scss" scoped></style>
+import { useI18n } from '#i18n';
+
+const { locale, locales } = useI18n();
+const availableLocales = computed(() => {
+    return locales.value.filter((i) => i.code !== locale.value);
+});
+</script>
 
 <!-- <i18n lang="json">
 {
