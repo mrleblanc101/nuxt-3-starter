@@ -5,6 +5,11 @@ html,
 body {
     overflow-x: hidden;
 }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 #app {
     display: flex;
     flex-direction: column;
