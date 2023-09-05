@@ -7,11 +7,14 @@ import ViteSvgLoader from 'vite-svg-loader';
 export default defineNuxtConfig({
     srcDir: 'src/',
 
+    devtools: { enabled: true },
+
     css: ['@/assets/scss/foundation.scss', '@/assets/scss/app.scss'],
 
     modules: ['@nuxtjs/i18n'],
 
     i18n: {
+        strategy: 'prefix_except_default',
         defaultLocale: 'fr',
         langDir: 'i18n/',
         locales: [
