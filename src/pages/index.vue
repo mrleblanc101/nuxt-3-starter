@@ -91,7 +91,7 @@
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $color-primary: #003e27;
 $color-secondary: #00cd81;
 $color-text: #ffffff;

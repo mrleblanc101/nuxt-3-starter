@@ -1,10 +1,7 @@
-import { defineNuxtConfig } from 'nuxt';
+import { defineNuxtConfig } from 'nuxt/config';
 import EslintPlugin from 'vite-plugin-eslint';
 import StylelintPlugin from 'vite-plugin-stylelint';
 import ViteSvgLoader from 'vite-svg-loader';
-
-import messages from './src/i18n/index.json';
-import svgoConfig from './svgo.config.js';
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -15,24 +12,22 @@ export default defineNuxtConfig({
     modules: ['@nuxtjs/i18n'],
 
     i18n: {
+        defaultLocale: 'fr',
+        langDir: 'i18n/',
         locales: [
             {
                 code: 'fr',
                 name: 'Français',
                 iso: 'fr-CA',
+                file: 'fr.js',
             },
             {
                 code: 'en',
                 name: 'English',
                 iso: 'en-CA',
+                file: 'en.js',
             },
         ],
-        defaultLocale: 'fr',
-
-        vueI18n: {
-            legacy: false,
-            messages,
-        },
     },
 
     vite: {
@@ -44,7 +39,20 @@ export default defineNuxtConfig({
                 fix: true,
             }),
             ViteSvgLoader({
-                svgoConfig,
+                svgoConfig: {
+                    plugins: [
+                        { name: 'prefixIds' },
+                        { name: 'removeTitle' },
+                        { name: 'removeDesc' },
+                        { name: 'removeDimensions' },
+                        {
+                            name: 'removeAttrs',
+                            params: {
+                                attrs: '(fill|stroke)',
+                            },
+                        },
+                    ],
+                },
             }),
         ],
         css: {
