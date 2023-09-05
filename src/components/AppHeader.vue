@@ -1,7 +1,7 @@
 <template>
     <header>
         <LibeoLogo height="50" width="200" />
-        {{ $t('header') }}
+        {{ $t('app.header') }}
         <NuxtLink v-for="l in availableLocales" :key="l.code" :to="switchLocalePath(l.code)" class="button secondary">
             {{ l.name }}
         </NuxtLink>
@@ -18,14 +18,3 @@ const availableLocales = computed(() => {
     return locales.value.filter((i) => i.code !== locale.value);
 });
 </script>
-
-<!-- <i18n lang="json">
-{
-  "fr": {
-    "header": "Entête"
-  },
-  "en": {
-    "header": "Header"
-  }
-}
-</i18n> -->

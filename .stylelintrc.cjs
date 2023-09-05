@@ -1,7 +1,7 @@
 module.exports = {
+    extends: ['stylelint-config-standard-scss', 'stylelint-config-recommended-vue/scss'],
     plugins: ['stylelint-order'],
     rules: {
-        'color-hex-case': 'lower',
         'color-hex-length': 'long',
         'no-empty-source': null,
         'declaration-block-no-duplicate-properties': true,
