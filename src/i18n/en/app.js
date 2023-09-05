@@ -1,3 +1,3 @@
 export default {
-    "header": "Nuxt 3 - Kit de démarrage",
-}
+    header: 'Nuxt 3 - Kit de démarrage',
+};
