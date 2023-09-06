@@ -1,5 +1,7 @@
-import app from '@/fr/app';
+// import app from '@/fr/app';
 
 export default {
-    app,
+    app: {
+        header: 'Nuxt 3 - Starter kit',
+    },
 };
