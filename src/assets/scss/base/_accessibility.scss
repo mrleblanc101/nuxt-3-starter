@@ -12,7 +12,6 @@ when an element receives focus via the mouse. */
 :focus-visible {
     outline: 3px solid black;
 }
-
 .skip-menu-link,
 .skip-content-link {
     @include visuallyhidden;
@@ -21,6 +20,7 @@ when an element receives focus via the mouse. */
     top: 6px;
     left: 6px;
     background-color: $color-white;
+
     // Reset style on focus
     &:focus {
         @include visuallyhidden(false);
