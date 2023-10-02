@@ -11,22 +11,22 @@
         "preview": "nuxt preview"
     },
     "devDependencies": {
-        "@nuxt/devtools": "^0.8.2",
+        "@nuxt/devtools": "^1.0.0-beta.0",
         "@nuxtjs/eslint-config-typescript": "^12.1.0",
         "@nuxtjs/i18n": "^8.0.0-rc.4",
-        "@types/eslint": "^8.44.2",
+        "@types/eslint": "^8.44.3",
         "@types/stylelint": "^14.0.0",
-        "@typescript-eslint/eslint-plugin": "^6.5.0",
-        "@typescript-eslint/parser": "^6.5.0",
-        "eslint": "^8.48.0",
+        "@typescript-eslint/eslint-plugin": "^6.7.3",
+        "@typescript-eslint/parser": "^6.7.3",
+        "eslint": "^8.50.0",
         "eslint-config-prettier": "^9.0.0",
         "eslint-plugin-prettier": "^5.0.0",
         "eslint-plugin-vue": "^9.17.0",
         "foundation-sites": "^6.8.1",
-        "nuxt": "^3.7.0",
+        "nuxt": "^3.7.4",
         "postcss-html": "^1.5.0",
         "prettier": "^3.0.3",
-        "sass": "^1.66.1",
+        "sass": "^1.68.0",
         "stylelint": "^15.10.3",
         "stylelint-config-recommended-vue": "^1.5.0",
         "stylelint-config-standard-scss": "^11.0.0",
@@ -35,5 +35,8 @@
         "vite-plugin-eslint": "^1.8.1",
         "vite-plugin-stylelint": "^5.1.1",
         "vite-svg-loader": "^4.0.0"
+    },
+    "resolutions": {
+        "vite-plugin-inspect": "0.7.38"
     }
 }
