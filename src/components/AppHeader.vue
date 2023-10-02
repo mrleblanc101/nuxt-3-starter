@@ -9,9 +9,8 @@
 </template>
 
 <script setup>
-import LibeoLogo from '@/assets/svg/libeo-logo.svg';
-
 import { useI18n } from '#i18n';
+import LibeoLogo from '@/assets/svg/libeo-logo.svg?component';
 
 const { locale, locales } = useI18n();
 const availableLocales = computed(() => {

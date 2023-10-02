@@ -42,6 +42,7 @@ export default defineNuxtConfig({
                 fix: true,
             }),
             ViteSvgLoader({
+                defaultImport: 'url',
                 svgoConfig: {
                     plugins: [
                         { name: 'prefixIds' },

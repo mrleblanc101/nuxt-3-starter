@@ -17,9 +17,9 @@
                     <li>
                         <a target="_blank" href="https://router.vuejs.org/">Vue Router</a>
                     </li>
-                    <!-- <li>
-                        <a target="_blank" href="#">Vue Meta</a>
-                    </li> -->
+                    <li>
+                        <a target="_blank" href="https://pinia.vuejs.org/">Pinia</a>
+                    </li>
                 </ul>
             </div>
             <div class="cell">
@@ -34,12 +34,6 @@
                     </li>
                     <li>
                         <a target="_blank" href="https://devtools.vuejs.org/">Vue-devtools</a>
-                    </li>
-                    <!-- <li>
-                        <a target="_blank" href="#">Nuxt-devtools</a>
-                    </li> -->
-                    <li>
-                        <a target="_blank" href="https://vue-loader.vuejs.org/">Vue-loader</a>
                     </li>
                     <li>
                         <a target="_blank" href="https://vitejs.dev/">Vite</a>
@@ -59,22 +53,8 @@
                 </ul>
             </div>
             <div class="cell">
-                <h3>Recommanded Plugins</h3>
-                <ul>
-                    <li>
-                        <a target="_blank" href="https://pinia.vuejs.org/">Pinia</a>
-                    </li>
-                    <!-- <li>
-                        <a target="_blank" href="#">Swiper</a>
-                    </li> -->
-                    <!-- <li>
-                        <a target="_blank" href="#">Date-fns</a>
-                    </li> -->
-                </ul>
-            </div>
-            <div class="cell">
                 <h3>Resources</h3>
-                <p></p>
+                <p>Curated lists of awesome things related to Nuxt and Vue.js</p>
                 <ul>
                     <li>
                         <a target="_blank" href="https://github.com/vuejs/awesome-vue">Awesome Vue</a>
@@ -134,9 +114,12 @@ ul {
 }
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 16px;
+
+    @include breakpoint(large) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 .cell {
     padding: 16px;
