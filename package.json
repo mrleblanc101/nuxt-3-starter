@@ -35,8 +35,5 @@
         "vite-plugin-eslint": "^1.8.1",
         "vite-plugin-stylelint": "^5.1.1",
         "vite-svg-loader": "^4.0.0"
-    },
-    "resolutions": {
-        "vite-plugin-inspect": "0.7.38"
     }
 }
