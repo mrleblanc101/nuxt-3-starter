@@ -1,4 +1,4 @@
-FROM docker.gitlab.libeo.com/sysadmins/docker/node:16
+FROM docker.gitlab.libeo.com/sysadmins/docker/node:20
 
 COPY --chown=deploy:deploy package.json /app/
 COPY --chown=deploy:deploy yarn.lock /app/
