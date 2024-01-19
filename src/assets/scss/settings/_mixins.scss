@@ -1,21 +1,6 @@
 //  -----------------------------
 //  Mixins
 //  -----------------------------
-// stylelint-disable declaration-block-no-duplicate-properties
-
-
-// Clearfix
-@mixin clearfix {
-    &:after {
-        clear: both;
-    }
-    &:before,
-    &:after {
-        content: '';
-        display: table;
-        line-height: 0;
-    }
-}
 
 // Visuallyhidden
 @mixin visuallyhidden($hide: true) {
@@ -58,11 +43,4 @@
 // REM font-size and line-height
 @mixin rem-typo($font) {
     font-size: rem($font);
-}
-
-// Transitions
-@mixin transition($properties...) {
-    transition-timing-function: $transition-duration;
-    transition-duration: $transition-duration;
-    transition-property: $properties;
 }
