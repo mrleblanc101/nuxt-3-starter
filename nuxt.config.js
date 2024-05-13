@@ -13,6 +13,13 @@ export default defineNuxtConfig({
 
     modules: ['@nuxtjs/i18n'],
 
+    runtimeConfig: {
+        public: {
+            commitTag: process.env.COMMIT_TAG || process.env.NUXT_ENV_CURRENT_GIT_TAG,
+            commitShortSha: process.env.COMMIT_SHORT_SHA || process.env.NUXT_ENV_CURRENT_GIT_SHA,
+        },
+    },
+
     i18n: {
         strategy: 'prefix_except_default',
         defaultLocale: 'fr',
