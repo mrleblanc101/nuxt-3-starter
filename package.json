@@ -5,8 +5,9 @@
     },
     "type": "module",
     "scripts": {
-        "build": "nuxt build",
-        "dev": "nuxt dev",
+        "get-git-env": "COMMIT_SHORT_SHA=`git rev-parse --short HEAD` COMMIT_TAG=`git describe --tags $(git rev-list --tags --max-count=1) 2>/dev/null`",
+        "dev": "yarn get-git-env nuxt dev",
+        "build": "yarn get-git-env nuxt build",
         "generate": "nuxt generate",
         "preview": "nuxt preview"
     },
